@@ -1,0 +1,36 @@
+show databases;
+
+create database test;//test 만들기
+
+use test;//test사용
+
+create table test_table(//test에 테이블 만들기
+name varchar(10),
+age int,
+height double
+);
+
+insert into test_table(name, age, height) values('이민호',20,178.6);
+insert into test_table(name, age, height) values('정채연',21,162.5);
+insert into test_table(name, age, height) values('송중기',22,179.8);
+
+select*from test_table;//조회
+
+select*from test_table where age >=21;//where조건조회
+
+alter table test_table add gender varchar(5) default '-';//칼럼추가
+
+//내용 수정
+update test_table set gender='남' where name='이민호';
+update test_table set gender='여' where name='정채연';
+update test_table set gender='남' where name='송중기';
+
+select*from test_table where age>=21 and height >=170;//and 조회
+select*from test_table where age>=21 or height >=170;//or 조회
+
+select*from test_table where height between 160 and 179;//between a and b 조회
+
+select*from test_table order by height asc;//키 오름차순 정렬
+
+
+select*from test_table order by height desc;//키 내림차순 정렬

@@ -1,0 +1,8 @@
+MySQL
+
+설치 사전 요구사항
+1.Net FrameWork 4.5이상
+2.Visual C++ Redistributable package
+
+...
+MySQL Installer
